@@ -6,6 +6,7 @@ It is tested with pytorch-1.0.
 # Download data and running
 
 ```
+sudo -s
 git clone https://github.com/fxia22/pointnet.pytorch
 cd pointnet.pytorch
 pip install -e .
@@ -21,8 +22,16 @@ bash download.sh #download dataset
 Training 
 ```
 cd utils
-python train_classification.py --dataset <dataset path> --nepoch=<number epochs> --dataset_type <modelnet40 | shapenet>
-python train_segmentation.py --dataset <dataset path> --nepoch=<number epochs> 
+python3 train_classification.py --dataset ../shapenetcore_partanno_segmentation_benchmark_v0 --nepoch=3 --dataset_type shapenet
+
+python3 train_segmentation.py --dataset ../shapenetcore_partanno_segmentation_benchmark_v0 --nepoch=3
+```
+
+Show
+```
+python3 show_cls.py
+
+python3 show3d_balls.py 
 ```
 
 Use `--feature_transform` to use feature transform.

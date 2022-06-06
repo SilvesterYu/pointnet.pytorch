@@ -13,7 +13,7 @@ import torch.nn.functional as F
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--model', type=str, default = '',  help='model path')
+parser.add_argument('--model', type=str, default = './cls/cls_model_0.pth',  help='model path')
 parser.add_argument('--num_points', type=int, default=2500, help='input batch size')
 
 
@@ -21,7 +21,7 @@ opt = parser.parse_args()
 print(opt)
 
 test_dataset = ShapeNetDataset(
-    root='shapenetcore_partanno_segmentation_benchmark_v0',
+    root='../shapenetcore_partanno_segmentation_benchmark_v0',
     split='test',
     classification=True,
     npoints=opt.num_points,
