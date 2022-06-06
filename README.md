@@ -30,7 +30,7 @@ python3
 ```
 
 in Python3 do this, line by line
-```
+```python
 import torch
 device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 print(device)
