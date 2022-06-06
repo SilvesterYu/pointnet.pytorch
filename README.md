@@ -52,6 +52,7 @@ Download and build visualization tool
 cd scripts
 bash build.sh #build C++ code for visualization
 bash download.sh #download dataset
+cd ..
 ```
 
 Training 
