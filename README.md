@@ -42,7 +42,7 @@ torch.version.cuda
 
 ```
 sudo -s
-git clone https://github.com/fxia22/pointnet.pytorch
+git clone https://github.com/SilvesterYu/pointnet.pytorch
 cd pointnet.pytorch
 pip install -e .
 ```
