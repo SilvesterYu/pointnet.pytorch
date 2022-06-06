@@ -3,6 +3,41 @@ This repo is implementation for PointNet(https://arxiv.org/abs/1612.00593) in py
 
 It is tested with pytorch-1.0.
 
+# How to check Cuda
+
+0. Get sudo
+```
+sudo -s
+```
+
+1. Check driver
+
+```
+nvidia-smi
+```
+
+2. Check Cuda Compiler with
+```
+nvcc -V
+```
+
+3. Check PyTorch Binary and Architecture
+
+First go sudo, and open python3 in terminal
+
+```
+python3
+```
+
+in Python3 do this, line by line
+```
+import torch
+device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+print(device)
+print(torch.cuda.get_arch_list()) # make sure s_86 is there
+torch.version.cuda
+```
+
 # Download data and running
 
 ```
