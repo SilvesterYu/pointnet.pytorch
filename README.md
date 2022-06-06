@@ -30,7 +30,7 @@ python3
 ```
 
 in Python3 do this, line by line
-```
+```python
 import torch
 device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 print(device)
@@ -52,6 +52,7 @@ Download and build visualization tool
 cd scripts
 bash build.sh #build C++ code for visualization
 bash download.sh #download dataset
+cd ..
 ```
 
 Training 
