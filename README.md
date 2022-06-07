@@ -86,6 +86,17 @@ show a segmentation
 ```
 python3 show_seg.py
 ```
+Try with different objects
+```
+python3 show_seg.py --idx 5
+```
+```
+python3 show_seg.py --idx 500
+```
+```
+python3 show_seg.py --idx 1500
+```
+
 
 Use `--feature_transform` to use feature transform.
 
