@@ -74,11 +74,11 @@ python3 train_segmentation.py --dataset ../shapenetcore_partanno_segmentation_be
 ```
 
 #### Testing
-show class
+show classification
 ```
 python3 show_cls.py
 ```
-show an example
+show an example of points
 ```
 python3 show3d_balls.py 
 ```
