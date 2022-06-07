@@ -42,7 +42,7 @@ torch.version.cuda
 
 ```
 sudo -s
-git clone https://github.com/fxia22/pointnet.pytorch
+git clone https://github.com/SilvesterYu/pointnet.pytorch
 cd pointnet.pytorch
 pip install -e .
 ```
@@ -63,7 +63,7 @@ python3 train_classification.py --dataset ../shapenetcore_partanno_segmentation_
 python3 train_segmentation.py --dataset ../shapenetcore_partanno_segmentation_benchmark_v0 --nepoch=3
 ```
 
-Show
+Testing
 ```
 python3 show_cls.py
 
