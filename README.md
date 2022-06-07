@@ -55,6 +55,11 @@ bash download.sh #download dataset
 cd ..
 ```
 
+Before running the following, run
+```
+sudo -s
+```
+
 Training 
 ```
 cd utils
