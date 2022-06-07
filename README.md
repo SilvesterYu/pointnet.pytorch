@@ -63,9 +63,9 @@ sudo -s
 #### Training 
 ```
 cd utils
-'''
+```
 Train classification
-'''
+```
 python3 train_classification.py --dataset ../shapenetcore_partanno_segmentation_benchmark_v0 --nepoch=3 --dataset_type shapenet
 ```
 Train segmentation
