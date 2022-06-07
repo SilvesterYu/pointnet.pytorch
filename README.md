@@ -60,19 +60,31 @@ Before running the following, run
 sudo -s
 ```
 
-Training 
+#### Training 
 ```
 cd utils
+'''
+Train classification
+'''
 python3 train_classification.py --dataset ../shapenetcore_partanno_segmentation_benchmark_v0 --nepoch=3 --dataset_type shapenet
-
+```
+Train segmentation
+```
 python3 train_segmentation.py --dataset ../shapenetcore_partanno_segmentation_benchmark_v0 --nepoch=3
 ```
 
-Testing
+#### Testing
+show class
 ```
 python3 show_cls.py
-
+```
+show an example
+```
 python3 show3d_balls.py 
+```
+show a segmentation
+```
+python3 show_seg.py
 ```
 
 Use `--feature_transform` to use feature transform.
