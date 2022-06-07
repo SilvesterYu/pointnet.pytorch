@@ -27,6 +27,7 @@ test_dataset = ShapeNetDataset(
     npoints=opt.num_points,
     data_augmentation=False)
 
+
 testdataloader = torch.utils.data.DataLoader(
     test_dataset, batch_size=32, shuffle=True)
 
@@ -45,5 +46,13 @@ for i, data in enumerate(testdataloader, 0):
     loss = F.nll_loss(pred, target)
 
     pred_choice = pred.data.max(1)[1]
+    print("="*20)
+    print("target")
+    print(target)
+    print("pred choice")
+    print(pred_choice)
     correct = pred_choice.eq(target.data).cpu().sum()
+    # print("target.data; ", target.data)
+    print("equal or not")
+    print(pred_choice.eq(target.data))
     print('i:%d  loss: %f accuracy: %f' % (i, loss.data.item(), correct / float(32)))

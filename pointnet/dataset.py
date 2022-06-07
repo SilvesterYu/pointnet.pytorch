@@ -73,8 +73,8 @@ class ShapeNetDataset(data.Dataset):
         
         with open(self.catfile, 'r') as f:
             for line in f:
-                print("----- a line in catfile -----")
-                print(line)
+                # print("----- a line in catfile -----")
+                # print(line)
                 ls = line.strip().split()
                 self.cat[ls[0]] = ls[1]
         print("this is self.cat")

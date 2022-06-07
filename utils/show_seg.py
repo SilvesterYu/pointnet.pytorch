@@ -28,7 +28,8 @@ d = ShapeNetDataset(
     class_choice=[opt.class_choice],
     split='test',
     data_augmentation=False)
-
+#print("========")
+#print(d)
 idx = opt.idx
 
 print("model %d/%d" % (idx, len(d)))
