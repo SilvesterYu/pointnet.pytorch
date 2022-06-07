@@ -64,6 +64,7 @@ class ShapeNetDataset(data.Dataset):
         self.npoints = npoints
         self.root = root
         self.catfile = os.path.join(self.root, 'synsetoffset2category.txt')
+        print("------ this is self.catfile -------")
         print(self.catfile)
         self.cat = {}
         self.data_augmentation = data_augmentation
@@ -72,12 +73,17 @@ class ShapeNetDataset(data.Dataset):
         
         with open(self.catfile, 'r') as f:
             for line in f:
+                print("----- a line in catfile -----")
+                print(line)
                 ls = line.strip().split()
                 self.cat[ls[0]] = ls[1]
-        #print(self.cat)
-        if not class_choice is None:
+        print("this is self.cat")
+        print(self.cat)
+        print("class choicd:", class_choice)
+        if not class_choice is None and not len(class_choice[0]) == 0:
             self.cat = {k: v for k, v in self.cat.items() if k in class_choice}
-
+            print("here")
+            print(self.cat)
         self.id2cat = {v: k for k, v in self.cat.items()}
 
         self.meta = {}
@@ -104,6 +110,9 @@ class ShapeNetDataset(data.Dataset):
             for line in f:
                 ls = line.strip().split()
                 self.seg_classes[ls[0]] = int(ls[1])
+        print("-------")
+        print(self.cat.keys())
+        print("-------")
         self.num_seg_classes = self.seg_classes[list(self.cat.keys())[0]]
         print(self.seg_classes, self.num_seg_classes)
 
@@ -158,7 +167,9 @@ class ModelNetDataset(data.Dataset):
 
         self.cat = {}
         with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '../misc/modelnet_id.txt'), 'r') as f:
+            # print("this is f near line 162", f)
             for line in f:
+                # print("-----line-----")
                 ls = line.strip().split()
                 self.cat[ls[0]] = int(ls[1])
 
